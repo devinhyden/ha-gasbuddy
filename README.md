@@ -37,3 +37,19 @@ sensor:
 ```
 
 After restarting Home Assistant to reload the configuration, search for "GasBuddy" in your Entities list, and you should have a sensor item for each available fuel type at each configured station.
+
+##  Mapping Stations
+
+Home Assistant Core 2023.10 released a feature allowing you to define the entity map or state to be rendered on the map.
+
+``` yaml
+type: map
+entities:
+  - entity: sensor.gasbuddy_BRAND_NUMBER_regular
+    label_mode: state
+    focus: false
+  - entity: sensor.gasbuddy_BRAND_NUMBER_regular
+    label_mode: state
+    focus: true
+hours_to_show: 6
+```

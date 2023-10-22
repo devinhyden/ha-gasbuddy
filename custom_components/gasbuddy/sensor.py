@@ -94,8 +94,8 @@ class GasBuddySensor(Entity):
                         'city': r.json()['station']['City'],
                         'state': r.json()['station']['State'],
                         'zipcode': r.json()['station']['ZipCode'],
-                        'lat': r.json()['station']['Lat'],
-                        'lng': r.json()['station']['Lng'],
+                        'latitude': r.json()['station']['Lat'],
+                        'longitude': r.json()['station']['Lng'],
                     }
 
                     try:
