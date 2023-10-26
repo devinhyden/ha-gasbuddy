@@ -88,6 +88,7 @@ class GasBuddySensor(Entity):
         return self.attrs
 
     def update(self):
+        _LOGGER.info(f"Updating up GasBuddySensor {self.stationid}")
         r = requests.post("https://www.gasbuddy.com/gaspricemap/station", data={'id': self.stationid, 'fuelTypeId': '1'})
         if r.ok:
             for fuel in r.json()['station']['Fuels']:
