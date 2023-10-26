@@ -72,8 +72,8 @@ class GasBuddySensor(Entity):
         return "mdi:cash-100"
     
     @property
-    def unit_of_measurement(self):
-        return "CURRENCY_DOLLAR"
+    def native_unit_of_measurement(self):
+        return "$"
     
     @property
     def state_class(self):
